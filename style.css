@@ -1,5 +1,5 @@
-:root{--surface-1:#f5f4ee;--border:rgba(0,0,0,.12);--border-strong:rgba(0,0,0,.3);--border-stronger:rgba(0,0,0,.5);--text-primary:#1f1e1d;--text-secondary:#5f5e5a;--text-accent:#185FA5;--bg-accent:#E6F1FB;--border-accent:#85B7EB;--page:#fff}
-@media (prefers-color-scheme:dark){:root{--surface-1:#2a2a28;--border:rgba(255,255,255,.14);--border-strong:rgba(255,255,255,.35);--border-stronger:rgba(255,255,255,.55);--text-primary:#ecebe5;--text-secondary:#b4b2a9;--text-accent:#85B7EB;--bg-accent:#0C447C;--border-accent:#378ADD;--page:#1b1b1a}}
+:root{--surface-1:#f5f4ee;--border:rgba(0,0,0,.12);--border-strong:rgba(0,0,0,.3);--border-stronger:rgba(0,0,0,.5);--text-primary:#1f1e1d;--text-secondary:#5f5e5a;--text-accent:#185FA5;--bg-accent:#E6F1FB;--border-accent:#85B7EB;--page:#fff;--garment:#a9b4c0;--garment-stroke:#4a5a66}
+@media (prefers-color-scheme:dark){:root{--surface-1:#2a2a28;--border:rgba(255,255,255,.14);--border-strong:rgba(255,255,255,.35);--border-stronger:rgba(255,255,255,.55);--text-primary:#ecebe5;--text-secondary:#b4b2a9;--text-accent:#85B7EB;--bg-accent:#0C447C;--border-accent:#378ADD;--page:#1b1b1a;--garment:#6b7680;--garment-stroke:#d4cfc7}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--page);color:var(--text-primary);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
 main{max-width:560px;margin:0 auto;padding:16px}
@@ -20,7 +20,7 @@ button:hover{background:var(--surface-1)}
 .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 #all{display:none}
 @media print{
-:root{--surface-1:#f5f4ee;--border:rgba(0,0,0,.12);--border-strong:rgba(0,0,0,.3);--border-stronger:rgba(0,0,0,.5);--text-primary:#1f1e1d;--text-secondary:#5f5e5a;--text-accent:#185FA5;--bg-accent:#E6F1FB;--border-accent:#85B7EB;--page:#fff}
+:root{--surface-1:#f5f4ee;--border:rgba(0,0,0,.12);--border-strong:rgba(0,0,0,.3);--border-stronger:rgba(0,0,0,.5);--text-primary:#1f1e1d;--text-secondary:#5f5e5a;--text-accent:#185FA5;--bg-accent:#E6F1FB;--border-accent:#85B7EB;--page:#fff;--garment:#a9b4c0;--garment-stroke:#4a5a66}
 .noprint{display:none!important}
 main{max-width:none;padding:0}
 .fig{max-width:380px}

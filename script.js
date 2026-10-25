@@ -2,62 +2,69 @@ const A="var(--text-accent)";
 const dim=(a,b,c,d)=>`<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="${A}" stroke-width="1.5"/><circle cx="${a}" cy="${b}" r="2.5" fill="${A}"/><circle cx="${c}" cy="${d}" r="2.5" fill="${A}"/>`;
 const bd=(x,y,n)=>`<circle cx="${x}" cy="${y}" r="10" fill="var(--bg-accent)" stroke="var(--border-accent)"/><text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="${A}" font-family="system-ui,sans-serif">${n}</text>`;
 const ld=(a,b,c,d)=>`<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="var(--text-secondary)" stroke-width="0.75" stroke-dasharray="3 3"/>`;
-const limb=(a,b,c,d,w)=>`<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="var(--border-strong)" stroke-width="${w+2}" stroke-linecap="round"/><line x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="var(--surface-1)" stroke-width="${w}" stroke-linecap="round"/>`;
-const S='fill="var(--surface-1)" stroke="var(--border-strong)" stroke-width="1" stroke-linejoin="round"';
 const wrap=(h,t,d,body)=>`<svg width="100%" viewBox="0 0 380 ${h}" role="img"><title>${t}</title><desc>${d}</desc>${body}</svg>`;
 
-const bodySvg=()=>wrap(360,"Misure sul corpo","Figura maschile frontale con sette misure numerate",
-`<circle cx="190" cy="44" r="24" ${S}/>`+
-`<path d="M182 68 L182 84 M198 68 L198 84" stroke="var(--border-strong)" fill="none" stroke-width="1"/>`+
-`<path d="M118 96 L262 96 L256 150 L242 208 L250 252 L130 252 L138 208 L124 150 Z" ${S}/>`+
-limb(118,96,92,252,14)+limb(262,96,288,252,14)+limb(130,252,125,356,26)+limb(250,252,255,356,26)+
-dim(176,84,204,84)+ld(207,82,234,70)+bd(244,66,1)+
-dim(118,96,262,96)+bd(190,108,2)+
-dim(126,150,254,150)+bd(270,150,3)+
-dim(136,208,244,208)+bd(270,208,4)+
-dim(130,252,250,252)+bd(270,252,5)+
-dim(262,96,288,252)+ld(291,174,320,174)+bd(332,174,6)+
-dim(137,256,132,352)+bd(150,304,7));
+const bodySvg=()=>wrap(375,"Misure sul corpo","Figura maschile frontale con sette misure numerate",
+  `<circle cx="190" cy="38" r="23" fill="var(--garment)" stroke="var(--garment-stroke)" stroke-width="2"/>`
++`<rect x="178" y="61" width="24" height="12" rx="3" fill="var(--garment)" stroke="var(--garment-stroke)" stroke-width="2"/>`
++`<path d="M145 100 L235 100 L230 152 L218 200 L226 240 L174 240 L166 200 L154 152 Z" fill="var(--garment)" stroke="var(--garment-stroke)" stroke-width="2"/>`
++`<line x1="145" y1="100" x2="118" y2="250" stroke="var(--garment-stroke)" stroke-width="10" stroke-linecap="round"/>`
++`<line x1="235" y1="100" x2="262" y2="250" stroke="var(--garment-stroke)" stroke-width="10" stroke-linecap="round"/>`
++`<line x1="166" y1="240" x2="160" y2="352" stroke="var(--garment-stroke)" stroke-width="10" stroke-linecap="round"/>`
++`<line x1="214" y1="240" x2="220" y2="352" stroke="var(--garment-stroke)" stroke-width="10" stroke-linecap="round"/>`
++`<line x1="190" y1="100" x2="190" y2="240" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-dasharray="4 4"/>`
++dim(178,68,202,68)+ld(205,68,260,68)+bd(272,70,1)+
+ dim(145,100,235,100)+ld(238,98,292,98)+bd(304,100,2)+
+ dim(140,152,240,152)+ld(243,150,296,150)+bd(308,152,3)+
+ dim(154,200,226,200)+ld(229,198,284,198)+bd(296,200,4)+
+ dim(166,240,214,240)+ld(217,238,272,238)+bd(284,240,5)+
+ dim(145,100,118,250)+ld(115,253,62,262)+bd(42,266,6)+
+ dim(166,240,160,352)+ld(157,355,72,364)+bd(52,368,7));
 
 const pantsSvg=()=>wrap(290,"Pantalone steso","Pantalone visto da davanti con cinque misure numerate",
-`<path d="M110 30 L270 30 L284 92 L268 272 L204 272 L190 120 L176 272 L112 272 L96 92 Z" ${S}/>`+
-`<line x1="110" y1="52" x2="270" y2="52" stroke="var(--border-strong)" stroke-width="1"/>`+
-`<path d="M190 120 L190 272" fill="none" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="4 3"/>`+
-dim(110,40,270,40)+bd(150,40,1)+
-dim(190,30,190,120)+bd(190,72,2)+
-dim(102,140,188,140)+bd(286,140,3)+
-dim(194,122,194,272)+bd(212,200,4)+
-dim(112,262,176,262)+bd(145,272,5));
+  `<path d="M110 30 L270 30 L284 90 L270 272 L204 272 L190 120 L176 272 L112 272 L96 90 Z" fill="var(--garment)" stroke="var(--garment-stroke)" stroke-width="2"/>`
++`<line x1="190" y1="30" x2="190" y2="120" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-dasharray="4 4"/>`
++`<line x1="176" y1="272" x2="190" y2="120" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-linejoin="round"/>`
++`<line x1="204" y1="272" x2="190" y2="120" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-linejoin="round"/>`
++`<line x1="110" y1="52" x2="270" y2="52" stroke="var(--garment-stroke)" stroke-width="1"/>`
++dim(110,40,270,40)+ld(130,32,190,26)+bd(190,16,1)+
+ dim(190,30,190,120)+ld(193,76,260,76)+bd(272,78,2)+
+ dim(102,142,188,142)+ld(191,140,258,140)+bd(270,142,3)+
+ dim(190,122,190,272)+ld(193,200,260,200)+bd(272,202,4)+
+ dim(112,262,176,262)+ld(145,272,145,284)+bd(145,288,5));
 
 const shirtSvg=()=>wrap(285,"Camicia stesa","Camicia vista da davanti con sei misure numerate",
-`<path d="M160 28 L190 40 L220 28 L272 46 L336 202 L306 217 L254 112 L252 264 L128 264 L126 112 L74 217 L44 202 L108 46 Z" ${S}/>`+
-`<line x1="190" y1="40" x2="190" y2="100" stroke="var(--border-strong)" stroke-width="1"/>`+
-`<path d="M160 28 L190 40 L220 28" fill="none" stroke="var(--border-strong)" stroke-width="1"/>`+
-dim(160,24,220,24)+bd(190,16,6)+
-dim(108,52,272,52)+bd(190,64,1)+
-dim(129,112,251,112)+bd(270,112,2)+
-dim(129,187,251,187)+bd(270,187,3)+
-dim(160,28,160,264)+bd(150,274,4)+
-dim(112,56,62,205)+ld(62,205,44,220)+bd(34,230,5));
+  `<path d="M160 28 L190 40 L220 28 L272 46 L336 202 L306 217 L254 112 L252 266 L128 266 L126 112 L74 217 L44 202 L108 46 Z" fill="var(--garment)" stroke="var(--garment-stroke)" stroke-width="2"/>`
++`<line x1="190" y1="40" x2="190" y2="100" stroke="var(--garment-stroke)" stroke-width="1.5"/>`
++`<path d="M160 28 L190 40 L220 28" fill="none" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-linejoin="round"/>`
++`<line x1="190" y1="100" x2="190" y2="266" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-dasharray="4 4"/>`
++dim(160,24,220,24)+ld(223,22,280,22)+bd(292,24,6)+
+ dim(108,52,272,52)+ld(275,50,330,50)+bd(342,52,1)+
+ dim(129,112,251,112)+ld(254,110,310,110)+bd(322,112,2)+
+ dim(129,187,251,187)+ld(254,185,310,185)+bd(322,187,3)+
+ dim(160,28,160,266)+ld(157,270,102,274)+bd(78,278,4)+
+ dim(112,56,62,205)+ld(59,207,30,220)+bd(14,226,5));
 
 const jacketSvg=()=>wrap(300,"Giacca stesa","Giacca vista da davanti con cinque misure numerate",
-`<path d="M158 26 L190 44 L222 26 L276 46 L342 207 L308 222 L258 114 L256 277 L124 277 L122 114 L70 222 L38 207 L106 46 Z" ${S}/>`+
-`<path d="M158 26 L190 152 L222 26" fill="none" stroke="var(--border-strong)" stroke-width="1" stroke-linejoin="round"/>`+
-`<line x1="190" y1="152" x2="190" y2="277" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="4 3"/>`+
-dim(107,52,273,52)+bd(286,52,1)+
-dim(125,114,255,114)+bd(286,114,2)+
-dim(126,192,254,192)+bd(286,192,3)+
-dim(145,31,145,277)+ld(145,277,128,292)+bd(116,300,4)+
-dim(110,56,57,210)+ld(57,210,40,225)+bd(30,235,5));
+  `<path d="M158 26 L190 44 L222 26 L276 46 L342 207 L308 222 L258 114 L256 280 L124 280 L122 114 L70 222 L38 207 L106 46 Z" fill="var(--garment)" stroke="var(--garment-stroke)" stroke-width="2"/>`
++`<path d="M158 26 L190 156 L222 26" fill="none" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-linejoin="round"/>`
++`<line x1="190" y1="156" x2="190" y2="280" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-dasharray="4 4"/>`
++dim(107,52,273,52)+ld(276,50,332,50)+bd(344,52,1)+
+ dim(125,114,255,114)+ld(258,112,314,112)+bd(326,114,2)+
+ dim(126,192,254,192)+ld(257,190,313,190)+bd(325,192,3)+
+ dim(145,31,145,280)+ld(142,284,88,290)+bd(62,296,4)+
+ dim(110,56,57,210)+ld(54,212,26,224)+bd(10,230,5));
 
 const poloSvg=()=>wrap(285,"Polo stesa","Polo vista da davanti con quattro misure numerate",
-`<path d="M160 28 L190 40 L220 28 L272 46 L322 102 L292 127 L254 110 L252 264 L128 264 L126 110 L88 127 L58 102 L108 46 Z" ${S}/>`+
-`<line x1="190" y1="40" x2="190" y2="102" stroke="var(--border-strong)" stroke-width="1"/>`+
-`<circle cx="190" cy="62" r="2" fill="var(--border-stronger)"/><circle cx="190" cy="82" r="2" fill="var(--border-stronger)"/>`+
-dim(108,52,272,52)+bd(286,52,1)+
-dim(129,110,251,110)+bd(286,110,2)+
-dim(160,28,160,264)+bd(150,274,3)+
-dim(112,54,75,112)+ld(75,112,58,126)+bd(46,136,4));
+  `<path d="M160 28 L190 40 L220 28 L272 46 L322 102 L292 127 L254 110 L252 266 L128 266 L126 110 L88 127 L58 102 L108 46 Z" fill="var(--garment)" stroke="var(--garment-stroke)" stroke-width="2"/>`
++`<line x1="190" y1="40" x2="190" y2="102" stroke="var(--garment-stroke)" stroke-width="1.5"/>`
++`<circle cx="190" cy="62" r="2" fill="var(--garment-stroke)"/><circle cx="190" cy="82" r="2" fill="var(--garment-stroke)"/>`
++`<path d="M160 28 L190 40 L220 28" fill="none" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-linejoin="round"/>`
++`<line x1="190" y1="102" x2="190" y2="266" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-dasharray="4 4"/>`
++dim(108,52,272,52)+ld(275,50,330,50)+bd(342,52,1)+
+ dim(129,110,251,110)+ld(254,108,310,108)+bd(322,110,2)+
+ dim(160,28,160,266)+ld(157,270,102,274)+bd(78,278,3)+
+ dim(112,54,75,112)+ld(72,114,44,126)+bd(28,132,4));
 
 const T={
 body:{l:"Su di te",svg:bodySvg,items:[
