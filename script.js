@@ -6,49 +6,58 @@ const limb=(a,b,c,d,w)=>`<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="v
 const S='fill="var(--surface-1)" stroke="var(--border-strong)" stroke-width="1" stroke-linejoin="round"';
 const wrap=(h,t,d,body)=>`<svg width="100%" viewBox="0 0 380 ${h}" role="img"><title>${t}</title><desc>${d}</desc>${body}</svg>`;
 
-const bodySvg=()=>wrap(350,"Misure sul corpo","Figura maschile frontale con sette misure numerate",
-limb(126,70,100,200,16)+limb(254,70,280,200,16)+limb(160,205,155,335,28)+limb(220,205,225,335,28)+
-`<circle cx="190" cy="30" r="18" ${S}/><path d="M182 46 L182 64 M198 46 L198 64" stroke="var(--border-strong)" fill="none"/>`+
-`<path d="M130 64 L250 64 L246 110 L234 160 L242 206 L138 206 L146 160 L134 110 Z" ${S}/>`+
-dim(180,56,200,56)+ld(203,54,228,39)+bd(238,34,1)+
-dim(138,76,242,76)+bd(190,76,2)+
-dim(136,110,244,110)+bd(190,110,3)+
-dim(148,160,232,160)+bd(190,160,4)+
-dim(142,196,238,196)+bd(190,196,5)+
-dim(254,70,280,200)+ld(268,135,296,135)+bd(306,135,6)+
-dim(177,214,172,333)+bd(190,280,7));
+const bodySvg=()=>wrap(360,"Misure sul corpo","Figura maschile frontale con sette misure numerate",
+`<circle cx="190" cy="44" r="24" ${S}/>`+
+`<path d="M182 68 L182 84 M198 68 L198 84" stroke="var(--border-strong)" fill="none" stroke-width="1"/>`+
+`<path d="M118 96 L262 96 L256 150 L242 208 L250 252 L130 252 L138 208 L124 150 Z" ${S}/>`+
+limb(118,96,92,252,14)+limb(262,96,288,252,14)+limb(130,252,125,356,26)+limb(250,252,255,356,26)+
+dim(176,84,204,84)+ld(207,82,234,70)+bd(244,66,1)+
+dim(118,96,262,96)+bd(190,108,2)+
+dim(126,150,254,150)+bd(270,150,3)+
+dim(136,208,244,208)+bd(270,208,4)+
+dim(130,252,250,252)+bd(270,252,5)+
+dim(262,96,288,252)+ld(291,174,320,174)+bd(332,174,6)+
+dim(137,256,132,352)+bd(150,304,7));
 
 const pantsSvg=()=>wrap(290,"Pantalone steso","Pantalone visto da davanti con cinque misure numerate",
-`<path d="M110 30 L270 30 L282 90 L268 270 L202 270 L190 120 L178 270 L112 270 L98 90 Z" ${S}/><line x1="110" y1="50" x2="270" y2="50" stroke="var(--border-strong)"/>`+
+`<path d="M110 30 L270 30 L284 92 L268 272 L204 272 L190 120 L176 272 L112 272 L96 92 Z" ${S}/>`+
+`<line x1="110" y1="52" x2="270" y2="52" stroke="var(--border-strong)" stroke-width="1"/>`+
+`<path d="M190 120 L190 272" fill="none" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="4 3"/>`+
 dim(110,40,270,40)+bd(150,40,1)+
-dim(190,30,190,120)+bd(190,85,2)+
-dim(102,140,188,140)+bd(145,140,3)+
-dim(212,125,212,270)+bd(212,200,4)+
-dim(112,258,178,258)+bd(145,258,5));
+dim(190,30,190,120)+bd(190,72,2)+
+dim(102,140,188,140)+bd(286,140,3)+
+dim(194,122,194,272)+bd(212,200,4)+
+dim(112,262,176,262)+bd(145,272,5));
 
 const shirtSvg=()=>wrap(285,"Camicia stesa","Camicia vista da davanti con sei misure numerate",
-`<path d="M160 28 L190 40 L220 28 L270 45 L335 200 L305 215 L252 110 L250 262 L130 262 L128 110 L75 215 L45 200 L110 45 Z" ${S}/>`+
-dim(160,24,220,24)+bd(190,24,6)+
-dim(108,52,272,52)+bd(190,56,1)+
-dim(129,112,251,112)+bd(205,112,2)+
-dim(129,185,251,185)+bd(205,185,3)+
-dim(160,28,160,262)+bd(160,235,4)+
-dim(112,56,62,205)+bd(87,128,5));
+`<path d="M160 28 L190 40 L220 28 L272 46 L336 202 L306 217 L254 112 L252 264 L128 264 L126 112 L74 217 L44 202 L108 46 Z" ${S}/>`+
+`<line x1="190" y1="40" x2="190" y2="100" stroke="var(--border-strong)" stroke-width="1"/>`+
+`<path d="M160 28 L190 40 L220 28" fill="none" stroke="var(--border-strong)" stroke-width="1"/>`+
+dim(160,24,220,24)+bd(190,16,6)+
+dim(108,52,272,52)+bd(190,64,1)+
+dim(129,112,251,112)+bd(270,112,2)+
+dim(129,187,251,187)+bd(270,187,3)+
+dim(160,28,160,264)+bd(150,274,4)+
+dim(112,56,62,205)+ld(62,205,44,220)+bd(34,230,5));
 
 const jacketSvg=()=>wrap(300,"Giacca stesa","Giacca vista da davanti con cinque misure numerate",
-`<path d="M158 26 L190 44 L222 26 L275 44 L340 205 L308 220 L256 112 L254 275 L126 275 L124 112 L72 220 L40 205 L105 44 Z" ${S}/><path d="M158 26 L190 150 L222 26" fill="none" stroke="var(--border-strong)" stroke-linejoin="round"/><line x1="190" y1="150" x2="190" y2="275" stroke="var(--border-strong)" stroke-dasharray="4 3"/>`+
-dim(107,52,273,52)+bd(245,52,1)+
-dim(125,115,255,115)+bd(235,115,2)+
-dim(126,190,254,190)+bd(235,190,3)+
-dim(145,31,145,275)+bd(145,240,4)+
-dim(110,56,57,210)+bd(82,140,5));
+`<path d="M158 26 L190 44 L222 26 L276 46 L342 207 L308 222 L258 114 L256 277 L124 277 L122 114 L70 222 L38 207 L106 46 Z" ${S}/>`+
+`<path d="M158 26 L190 152 L222 26" fill="none" stroke="var(--border-strong)" stroke-width="1" stroke-linejoin="round"/>`+
+`<line x1="190" y1="152" x2="190" y2="277" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="4 3"/>`+
+dim(107,52,273,52)+bd(286,52,1)+
+dim(125,114,255,114)+bd(286,114,2)+
+dim(126,192,254,192)+bd(286,192,3)+
+dim(145,31,145,277)+ld(145,277,128,292)+bd(116,300,4)+
+dim(110,56,57,210)+ld(57,210,40,225)+bd(30,235,5));
 
 const poloSvg=()=>wrap(285,"Polo stesa","Polo vista da davanti con quattro misure numerate",
-`<path d="M160 28 L190 40 L220 28 L270 45 L320 100 L290 125 L252 108 L250 262 L130 262 L128 108 L90 125 L60 100 L110 45 Z" ${S}/><line x1="190" y1="40" x2="190" y2="100" stroke="var(--border-strong)"/><circle cx="190" cy="60" r="2" fill="var(--border-stronger)"/><circle cx="190" cy="80" r="2" fill="var(--border-stronger)"/>`+
-dim(108,52,272,52)+bd(235,52,1)+
-dim(129,118,251,118)+bd(225,118,2)+
-dim(160,28,160,262)+bd(160,215,3)+
-dim(112,54,75,112)+bd(93,83,4));
+`<path d="M160 28 L190 40 L220 28 L272 46 L322 102 L292 127 L254 110 L252 264 L128 264 L126 110 L88 127 L58 102 L108 46 Z" ${S}/>`+
+`<line x1="190" y1="40" x2="190" y2="102" stroke="var(--border-strong)" stroke-width="1"/>`+
+`<circle cx="190" cy="62" r="2" fill="var(--border-stronger)"/><circle cx="190" cy="82" r="2" fill="var(--border-stronger)"/>`+
+dim(108,52,272,52)+bd(286,52,1)+
+dim(129,110,251,110)+bd(286,110,2)+
+dim(160,28,160,264)+bd(150,274,3)+
+dim(112,54,75,112)+ld(75,112,58,126)+bd(46,136,4));
 
 const T={
 body:{l:"Su di te",svg:bodySvg,items:[
