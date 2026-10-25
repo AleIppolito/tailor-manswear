@@ -1,34 +1,33 @@
-Alessandro:
-<!doctype html>
-<html lang=“it”>
+﻿<!doctype html>
+<html lang="it">
 <head>
-<meta charset=“utf-8”>
-<meta name=“viewport” content=“width=device-width, initial-scale=1”>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Guida misure uomo</title>
 <style>
-:root{—surface-1:#f5f4ee;—border:rgba(0,0,0,.12);—border-strong:rgba(0,0,0,.3);—border-stronger:rgba(0,0,0,.5);—text-primary:#1f1e1d;—text-secondary:#5f5e5a;—text-accent:#185FA5;—bg-accent:#E6F1FB;—border-accent:#85B7EB;—page:#fff}
-@media (prefers-color-scheme:dark){:root{—surface-1:#2a2a28;—border:rgba(255,255,255,.14);—border-strong:rgba(255,255,255,.35);—border-stronger:rgba(255,255,255,.55);—text-primary:#ecebe5;—text-secondary:#b4b2a9;—text-accent:#85B7EB;—bg-accent:#0C447C;—border-accent:#378ADD;—page:#1b1b1a}}
+:root{--surface-1:#f5f4ee;--border:rgba(0,0,0,.12);--border-strong:rgba(0,0,0,.3);--border-stronger:rgba(0,0,0,.5);--text-primary:#1f1e1d;--text-secondary:#5f5e5a;--text-accent:#185FA5;--bg-accent:#E6F1FB;--border-accent:#85B7EB;--page:#fff}
+@media (prefers-color-scheme:dark){:root{--surface-1:#2a2a28;--border:rgba(255,255,255,.14);--border-strong:rgba(255,255,255,.35);--border-stronger:rgba(255,255,255,.55);--text-primary:#ecebe5;--text-secondary:#b4b2a9;--text-accent:#85B7EB;--bg-accent:#0C447C;--border-accent:#378ADD;--page:#1b1b1a}}
 *{box-sizing:border-box}
-body{margin:0;background:var(—page);color:var(—text-primary);font-family:system-ui,-apple-system,”Segoe UI”,sans-serif;line-height:1.5}
+body{margin:0;background:var(--page);color:var(--text-primary);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
 main{max-width:560px;margin:0 auto;padding:16px}
 h1{font-size:22px;font-weight:500;margin:0 0 4px}
 h2{font-size:18px;font-weight:500;margin:0 0 8px}
-.sub{color:var(—text-secondary);font-size:14px;margin:0 0 16px}
-button{font:inherit;font-size:14px;padding:8px 14px;border-radius:8px;border:.5px solid var(—border-strong);background:transparent;color:var(—text-primary);cursor:pointer}
-button:hover{background:var(—surface-1)}
+.sub{color:var(--text-secondary);font-size:14px;margin:0 0 16px}
+button{font:inherit;font-size:14px;padding:8px 14px;border-radius:8px;border:.5px solid var(--border-strong);background:transparent;color:var(--text-primary);cursor:pointer}
+button:hover{background:var(--surface-1)}
 #tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
 .fig{max-width:420px;margin:0 auto}
-.row{display:flex;gap:10px;padding:7px 0;border-top:.5px solid var(—border)}
-.num{flex:0 0 22px;height:22px;border-radius:50%;background:var(—bg-accent);color:var(—text-accent);font-size:13px;font-weight:500;display:flex;align-items:center;justify-content:center}
+.row{display:flex;gap:10px;padding:7px 0;border-top:.5px solid var(--border)}
+.num{flex:0 0 22px;height:22px;border-radius:50%;background:var(--bg-accent);color:var(--text-accent);font-size:13px;font-weight:500;display:flex;align-items:center;justify-content:center}
 .row div:last-child{font-size:14px}
 .row b{font-weight:500}
-.row span{color:var(—text-secondary)}
-.msg{margin-top:12px;background:var(—surface-1);border-radius:8px;padding:12px;font-size:14px}
-.msg small{display:block;font-size:13px;color:var(—text-secondary);margin-bottom:6px}
+.row span{color:var(--text-secondary)}
+.msg{margin-top:12px;background:var(--surface-1);border-radius:8px;padding:12px;font-size:14px}
+.msg small{display:block;font-size:13px;color:var(--text-secondary);margin-bottom:6px}
 .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 #all{display:none}
-@media print{
-:root{—surface-1:#f5f4ee;—border:rgba(0,0,0,.12);—border-strong:rgba(0,0,0,.3);—border-stronger:rgba(0,0,0,.5);—text-primary:#1f1e1d;—text-secondary:#5f5e5a;—text-accent:#185FA5;—bg-accent:#E6F1FB;—border-accent:#85B7EB;—page:#fff}
+@media print{
+:root{--surface-1:#f5f4ee;--border:rgba(0,0,0,.12);--border-strong:rgba(0,0,0,.3);--border-stronger:rgba(0,0,0,.5);--text-primary:#1f1e1d;--text-secondary:#5f5e5a;--text-accent:#185FA5;--bg-accent:#E6F1FB;--border-accent:#85B7EB;--page:#fff}
 .noprint{display:none!important}
 main{max-width:none;padding:0}
 .fig{max-width:380px}
@@ -42,32 +41,31 @@ body.printall #all{display:block}
 </head>
 <body>
 <main>
-<div class=“noprint”>
+<div class="noprint">
 <h1>Guida misure uomo</h1>
-<p class=“sub”>Come prendere le misure su di te e sui capi usati. Tocca un tab.</p>
-<div id=“tabs”></div>
+<p class="sub">Come prendere le misure su di te e sui capi usati. Tocca un tab.</p>
+<div id="tabs"></div>
 </div>
-<div id=“current”></div>
-<div id=“all”></div>
-<div class=“actions noprint”>
-<button id=“pdf1”>PDF di questa guida</button>
-<button id=“pdfAll”>PDF di tutte le guide</button>
+<div id="current"></div>
+<div id="all"></div>
+<div class="actions noprint">
+<button id="pdf1">PDF di questa guida</button>
+<button id="pdfAll">PDF di tutte le guide</button>
 </div>
 </main>
 <script>
-const A=“var(—text-accent)”;
-const dim=(a,b,c,d)=>`<line x1=“${a}” y1=“${b}” x2=“${c}” y2=“${d}” stroke=“${A}” stroke-width=“1.5”/><circle cx=“${a}” cy=“${b}” r=“2.5” fill=“${A}”/><circle cx=“${c}” cy=“${d}” r=“2.5” fill=“${A}”/>`;
-const bd=(x,y,n)=>`<circle cx=“${x}” cy=“${y}” r=“10” fill=“var(—bg-accent)” stroke=“var(—border-accent)”/><text x=“${x}” y=“${y}” text-anchor=“middle” dominant-baseline=“central” font-size=“13” font-weight=“500” fill=“${A}” font-family=“system-ui,sans-serif”>${n}</text>`;
-const ld=(a,b,c,d)=>`<line x1=“${a}” y1=“${b}” x2=“${c}” y2=“${d}” stroke=“var(—text-secondary)” stroke-width=“0.75” stroke-dasharray=“3 3”/>`;
-const limb=(a,b,c,d,w)=>`<line x1=“${a}” y1=“${b}” x2=“${c}” y2=“${d}” stroke=“var(—border-strong)” stroke-width=“${w+2}” stroke-linecap=“round”/><line x1=“${a}” y1=“${b}” x2=“${c}” y2=“${d}” stroke=“var(—surface-1)” stroke-width=“${w}” stroke-linecap=“round”/>`;
-const S=‘fill=“var(—surface-1)” stroke=“var(—border-strong)” stroke-width=“1” stroke-linejoin=“round”’;
-const wrap=(h,t,d,body)=>`<svg width=“100%” viewBox=“0 0 380 ${h}” role=“img”><title>${t}</title><desc>${d}</desc>${body}</svg>`;
+const A="var(--text-accent)";
+const dim=(a,b,c,d)=>`<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="${A}" stroke-width="1.5"/><circle cx="${a}" cy="${b}" r="2.5" fill="${A}"/><circle cx="${c}" cy="${d}" r="2.5" fill="${A}"/>`;
+const bd=(x,y,n)=>`<circle cx="${x}" cy="${y}" r="10" fill="var(--bg-accent)" stroke="var(--border-accent)"/><text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="${A}" font-family="system-ui,sans-serif">${n}</text>`;
+const ld=(a,b,c,d)=>`<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="var(--text-secondary)" stroke-width="0.75" stroke-dasharray="3 3"/>`;
+const limb=(a,b,c,d,w)=>`<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="var(--border-strong)" stroke-width="${w+2}" stroke-linecap="round"/><line x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="var(--surface-1)" stroke-width="${w}" stroke-linecap="round"/>`;
+const S='fill="var(--surface-1)" stroke="var(--border-strong)" stroke-width="1" stroke-linejoin="round"';
+const wrap=(h,t,d,body)=>`<svg width="100%" viewBox="0 0 380 ${h}" role="img"><title>${t}</title><desc>${d}</desc>${body}</svg>`;
 
-Alessandro:
-const bodySvg=()=>wrap(350,”Misure sul corpo”,”Figura maschile frontale con sette misure numerate”,
+const bodySvg=()=>wrap(350,"Misure sul corpo","Figura maschile frontale con sette misure numerate",
 limb(126,70,100,200,16)+limb(254,70,280,200,16)+limb(160,205,155,335,28)+limb(220,205,225,335,28)+
-`<circle cx=“190” cy=“30” r=“18” ${S}/><path d=“M182 46 L182 64 M198 46 L198 64” stroke=“var(—border-strong)” fill=“none”/>`+
-`<path d=“M130 64 L250 64 L246 110 L234 160 L242 206 L138 206 L146 160 L134 110 Z” ${S}/>`+
+`<circle cx="190" cy="30" r="18" ${S}/><path d="M182 46 L182 64 M198 46 L198 64" stroke="var(--border-strong)" fill="none"/>`+
+`<path d="M130 64 L250 64 L246 110 L234 160 L242 206 L138 206 L146 160 L134 110 Z" ${S}/>`+
 dim(180,56,200,56)+ld(203,54,228,39)+bd(238,34,1)+
 dim(138,76,242,76)+bd(190,76,2)+
 dim(136,110,244,110)+bd(190,110,3)+
@@ -76,16 +74,16 @@ dim(142,196,238,196)+bd(190,196,5)+
 dim(254,70,280,200)+ld(268,135,296,135)+bd(306,135,6)+
 dim(177,214,172,333)+bd(190,280,7));
 
-const pantsSvg=()=>wrap(290,”Pantalone steso”,”Pantalone visto da davanti con cinque misure numerate”,
-`<path d=“M110 30 L270 30 L282 90 L268 270 L202 270 L190 120 L178 270 L112 270 L98 90 Z” ${S}/><line x1=“110” y1=“50” x2=“270” y2=“50” stroke=“var(—border-strong)”/>`+
+const pantsSvg=()=>wrap(290,"Pantalone steso","Pantalone visto da davanti con cinque misure numerate",
+`<path d="M110 30 L270 30 L282 90 L268 270 L202 270 L190 120 L178 270 L112 270 L98 90 Z" ${S}/><line x1="110" y1="50" x2="270" y2="50" stroke="var(--border-strong)"/>`+
 dim(110,40,270,40)+bd(150,40,1)+
 dim(190,30,190,120)+bd(190,85,2)+
 dim(102,140,188,140)+bd(145,140,3)+
 dim(212,125,212,270)+bd(212,200,4)+
 dim(112,258,178,258)+bd(145,258,5));
 
-const shirtSvg=()=>wrap(285,”Camicia stesa”,”Camicia vista da davanti con sei misure numerate”,
-`<path d=“M160 28 L190 40 L220 28 L270 45 L335 200 L305 215 L252 110 L250 262 L130 262 L128 110 L75 215 L45 200 L110 45 Z” ${S}/>`+
+const shirtSvg=()=>wrap(285,"Camicia stesa","Camicia vista da davanti con sei misure numerate",
+`<path d="M160 28 L190 40 L220 28 L270 45 L335 200 L305 215 L252 110 L250 262 L130 262 L128 110 L75 215 L45 200 L110 45 Z" ${S}/>`+
 dim(160,24,220,24)+bd(190,24,6)+
 dim(108,52,272,52)+bd(190,56,1)+
 dim(129,112,251,112)+bd(205,112,2)+
@@ -93,89 +91,87 @@ dim(129,185,251,185)+bd(205,185,3)+
 dim(160,28,160,262)+bd(160,235,4)+
 dim(112,56,62,205)+bd(87,128,5));
 
-const jacketSvg=()=>wrap(300,”Giacca stesa”,”Giacca vista da davanti con cinque misure numerate”,
-`<path d=“M158 26 L190 44 L222 26 L275 44 L340 205 L308 220 L256 112 L254 275 L126 275 L124 112 L72 220 L40 205 L105 44 Z” ${S}/><path d=“M158 26 L190 150 L222 26” fill=“none” stroke=“var(—border-strong)” stroke-linejoin=“round”/><line x1=“190” y1=“150” x2=“190” y2=“275” stroke=“var(—border-strong)” stroke-dasharray=“4 3”/>`+
+const jacketSvg=()=>wrap(300,"Giacca stesa","Giacca vista da davanti con cinque misure numerate",
+`<path d="M158 26 L190 44 L222 26 L275 44 L340 205 L308 220 L256 112 L254 275 L126 275 L124 112 L72 220 L40 205 L105 44 Z" ${S}/><path d="M158 26 L190 150 L222 26" fill="none" stroke="var(--border-strong)" stroke-linejoin="round"/><line x1="190" y1="150" x2="190" y2="275" stroke="var(--border-strong)" stroke-dasharray="4 3"/>`+
 dim(107,52,273,52)+bd(245,52,1)+
 dim(125,115,255,115)+bd(235,115,2)+
 dim(126,190,254,190)+bd(235,190,3)+
 dim(145,31,145,275)+bd(145,240,4)+
 dim(110,56,57,210)+bd(82,140,5));
 
-const poloSvg=()=>wrap(285,”Polo stesa”,”Polo vista da davanti con quattro misure numerate”,
-`<path d=“M160 28 L190 40 L220 28 L270 45 L320 100 L290 125 L252 108 L250 262 L130 262 L128 108 L90 125 L60 100 L110 45 Z” ${S}/><line x1=“190” y1=“40” x2=“190” y2=“100” stroke=“var(—border-strong)”/><circle cx=“190” cy=“60” r=“2” fill=“var(—border-stronger)”/><circle cx=“190” cy=“80” r=“2” fill=“var(—border-stronger)”/>`+
+const poloSvg=()=>wrap(285,"Polo stesa","Polo vista da davanti con quattro misure numerate",
+`<path d="M160 28 L190 40 L220 28 L270 45 L320 100 L290 125 L252 108 L250 262 L130 262 L128 108 L90 125 L60 100 L110 45 Z" ${S}/><line x1="190" y1="40" x2="190" y2="100" stroke="var(--border-strong)"/><circle cx="190" cy="60" r="2" fill="var(--border-stronger)"/><circle cx="190" cy="80" r="2" fill="var(--border-stronger)"/>`+
 dim(108,52,272,52)+bd(235,52,1)+
 dim(129,118,251,118)+bd(225,118,2)+
 dim(160,28,160,262)+bd(160,215,3)+
 dim(112,54,75,112)+bd(93,83,4));
 
 const T={
-body:{l:”Su di te”,svg:bodySvg,items:[
-[“Collo”,”Metro intorno alla base del collo, un dito di gioco.”],
-[“Spalle”,”Da punta a punta della spalla, passando dietro.”],
-[“Torace”,”Sotto le ascelle, punto più pieno. Metro orizzontale, braccia giù.”],
-[“Vita”,”Dove porti davvero il pantalone, non dove vorresti.”],
-[“Fianchi”,”Punto più largo del sedere.”],
-[“Manica”,”Da punta spalla a polso, braccio appena piegato.”],
-[“Interno gamba”,”Dall’inforcatura fino a dove vuoi che finisca il pantalone.”]],
-tip:”Fatti aiutare: da solo sbagli di 2-3 cm. Trucco migliore: misura a plat un capo che ti sta già bene e usalo come riferimento.”},
-pants:{l:”Pantalone”,svg:pantsSvg,items:[
-[“Vita”,”Da bordo a bordo del cinturino, pantalone chiuso e steso. Per la circonferenza moltiplica per 2.”],
-[“Cavallo”,”Dall’incrocio delle cuciture al bordo alto del cinturino.”],
-[“Coscia”,”Una gamba, 2-3 cm sotto l’incrocio, da bordo a bordo.”],
-[“Interno gamba”,”Dall’incrocio delle cuciture al fondo, lungo l’interno.”],
-[“Fondo”,”Larghezza dell’apertura della gamba.”]],
-msg:”Ciao! Puoi misurarmi il pantalone steso e chiuso, senza tirare? Mi servono: vita (da bordo a bordo), cavallo, coscia, interno gamba e fondo. Grazie!”},
-shirt:{l:”Camicia”,svg:shirtSvg,items:[
-
-Alessandro:
-[“Spalle”,”Da cucitura a cucitura della spalla.”],
-[“Torace”,”Da ascella ad ascella, steso. Per la circonferenza moltiplica per 2.”],
-[“Vita”,”Nel punto più stretto, da bordo a bordo.”],
-[“Lunghezza”,”Dal punto alto della spalla, accanto al colletto, al fondo.”],
-[“Manica”,”Dalla cucitura della spalla al polsino, lungo l’esterno.”],
-[“Collo”,”Lungo il colletto, da centro bottone a fine asola.”]],
-msg:”Ciao! Puoi misurarmi la camicia stesa e abbottonata, senza tirare? Mi servono: spalle (da cucitura a cucitura), torace (da ascella ad ascella), vita, lunghezza (dal collo al fondo), manica (dalla spalla al polsino) e collo. Grazie!”},
-jacket:{l:”Giacca”,svg:jacketSvg,items:[
-[“Spalle”,”Da cucitura a cucitura, sul retro.”],
-[“Torace”,”Da ascella ad ascella, abbottonata e stesa. Per la circonferenza moltiplica per 2.”],
-[“Vita”,”Nel punto più stretto, da bordo a bordo.”],
-[“Lunghezza”,”Da sotto il colletto, sul retro, al fondo.”],
-[“Manica”,”Dalla cucitura della spalla al fondo, lungo l’esterno.”]],
-msg:”Ciao! Puoi misurarmi la giacca stesa e abbottonata, senza tirare? Mi servono: spalle (da cucitura a cucitura sul retro), torace (da ascella ad ascella), vita, lunghezza (da sotto il colletto al fondo) e manica (dalla spalla al fondo). Grazie!”},
-polo:{l:”Polo”,svg:poloSvg,items:[
-[“Spalle”,”Da cucitura a cucitura della spalla.”],
-[“Torace”,”Da ascella ad ascella, a riposo. Per la circonferenza moltiplica per 2.”],
-[“Lunghezza”,”Dal punto alto della spalla al fondo.”],
-[“Manica”,”Dalla cucitura della spalla al bordo della manica.”]],
-msg:”Ciao! Puoi misurarmi la polo stesa, senza tirare il tessuto? Mi servono: spalle, torace (da ascella ad ascella), lunghezza (dalla spalla al fondo) e manica. Grazie!”}
+body:{l:"Su di te",svg:bodySvg,items:[
+["Collo","Metro intorno alla base del collo, un dito di gioco."],
+["Spalle","Da punta a punta della spalla, passando dietro."],
+["Torace","Sotto le ascelle, punto più pieno. Metro orizzontale, braccia giù."],
+["Vita","Dove porti davvero il pantalone, non dove vorresti."],
+["Fianchi","Punto più largo del sedere."],
+["Manica","Da punta spalla a polso, braccio appena piegato."],
+["Interno gamba","Dall'inforcatura fino a dove vuoi che finisca il pantalone."]],
+tip:"Fatti aiutare: da solo sbagli di 2-3 cm. Trucco migliore: misura a plat un capo che ti sta già bene e usalo come riferimento."},
+pants:{l:"Pantalone",svg:pantsSvg,items:[
+["Vita","Da bordo a bordo del cinturino, pantalone chiuso e steso. Per la circonferenza moltiplica per 2."],
+["Cavallo","Dall'incrocio delle cuciture al bordo alto del cinturino."],
+["Coscia","Una gamba, 2-3 cm sotto l'incrocio, da bordo a bordo."],
+["Interno gamba","Dall'incrocio delle cuciture al fondo, lungo l'interno."],
+["Fondo","Larghezza dell'apertura della gamba."]],
+msg:"Ciao! Puoi misurarmi il pantalone steso e chiuso, senza tirare? Mi servono: vita (da bordo a bordo), cavallo, coscia, interno gamba e fondo. Grazie!"},
+shirt:{l:"Camicia",svg:shirtSvg,items:[
+["Spalle","Da cucitura a cucitura della spalla."],
+["Torace","Da ascella ad ascella, steso. Per la circonferenza moltiplica per 2."],
+["Vita","Nel punto più stretto, da bordo a bordo."],
+["Lunghezza","Dal punto alto della spalla, accanto al colletto, al fondo."],
+["Manica","Dalla cucitura della spalla al polsino, lungo l'esterno."],
+["Collo","Lungo il colletto, da centro bottone a fine asola."]],
+msg:"Ciao! Puoi misurarmi la camicia stesa e abbottonata, senza tirare? Mi servono: spalle (da cucitura a cucitura), torace (da ascella ad ascella), vita, lunghezza (dal collo al fondo), manica (dalla spalla al polsino) e collo. Grazie!"},
+jacket:{l:"Giacca",svg:jacketSvg,items:[
+["Spalle","Da cucitura a cucitura, sul retro."],
+["Torace","Da ascella ad ascella, abbottonata e stesa. Per la circonferenza moltiplica per 2."],
+["Vita","Nel punto più stretto, da bordo a bordo."],
+["Lunghezza","Da sotto il colletto, sul retro, al fondo."],
+["Manica","Dalla cucitura della spalla al fondo, lungo l'esterno."]],
+msg:"Ciao! Puoi misurarmi la giacca stesa e abbottonata, senza tirare? Mi servono: spalle (da cucitura a cucitura sul retro), torace (da ascella ad ascella), vita, lunghezza (da sotto il colletto al fondo) e manica (dalla spalla al fondo). Grazie!"},
+polo:{l:"Polo",svg:poloSvg,items:[
+["Spalle","Da cucitura a cucitura della spalla."],
+["Torace","Da ascella ad ascella, a riposo. Per la circonferenza moltiplica per 2."],
+["Lunghezza","Dal punto alto della spalla al fondo."],
+["Manica","Dalla cucitura della spalla al bordo della manica."]],
+msg:"Ciao! Puoi misurarmi la polo stesa, senza tirare il tessuto? Mi servono: spalle, torace (da ascella ad ascella), lunghezza (dalla spalla al fondo) e manica. Grazie!"}
 };
 
 function section(k){
 const t=T[k];
-const items=t.items.map((it,i)=>`<div class=“row”><div class=“num”>${i+1}</div><div><b>${it[0]}</b> <span>${it[1]}</span></div></div>`).join(“”);
-const box=t.msg?`<div class=“msg”><small>Messaggio per il venditore</small><div>${t.msg}</div><button class=“cp noprint” style=“margin-top:10px” data-m=“${t.msg.replace(/“/g,’&quot;’)}”>Copia messaggio</button></div>`:`<div class=“msg”>${t.tip}</div>`;
-return <h2>${k===“body”?”Misure su di te”:”Come misurare: “+t.l}</h2><div class=“fig”>${t.svg()}</div>${items}${box};
+const items=t.items.map((it,i)=>`<div class="row"><div class="num">${i+1}</div><div><b>${it[0]}</b> <span>${it[1]}</span></div></div>`).join("");
+const box=t.msg?`<div class="msg"><small>Messaggio per il venditore</small><div>${t.msg}</div><button class="cp noprint" style="margin-top:10px" data-m="${t.msg.replace(/"/g,'&quot;')}">Copia messaggio</button></div>`:`<div class="msg">${t.tip}</div>`;
+return <h2>${k==="body"?"Misure su di te":"Come misurare: "+t.l}</h2><div class="fig">${t.svg()}</div>${items}${box};
 }
-const tabs=document.getElementById(“tabs”),cur=document.getElementById(“current”),all=document.getElementById(“all”);
-let key=“body”;
+const tabs=document.getElementById("tabs"),cur=document.getElementById("current"),all=document.getElementById("all");
+let key="body";
 function show(k){
 key=k;
-[...tabs.children].forEach(b=>{const on=b.dataset.k===k;b.style.background=on?”var(—bg-accent)”:””;b.style.color=on?”var(—text-accent)”:””;b.style.borderColor=on?”var(—border-accent)”:””;});
+[...tabs.children].forEach(b=>{const on=b.dataset.k===k;b.style.background=on?"var(--bg-accent)":"";b.style.color=on?"var(--text-accent)":"";b.style.borderColor=on?"var(--border-accent)":"";});
 cur.innerHTML=section(k);
 }
-document.addEventListener(“click”,async e=>{
-const b=e.target.closest(“.cp”);
+document.addEventListener("click",async e=>{
+const b=e.target.closest(".cp");
 if(!b)return;
-try{await navigator.clipboard.writeText(b.dataset.m);b.textContent=“Copiato”;}catch(x){b.textContent=“Tieni premuto sul testo per copiare”;}
+try{await navigator.clipboard.writeText(b.dataset.m);b.textContent="Copiato";}catch(x){b.textContent="Tieni premuto sul testo per copiare";}
 });
 Object.keys(T).forEach(k=>{
-const b=document.createElement(“button”);b.textContent=T[k].l;b.dataset.k=k;b.onclick=()=>show(k);tabs.appendChild(b);
-const d=document.createElement(“div”);d.className=“page”;d.innerHTML=section(k);all.appendChild(d);
+const b=document.createElement("button");b.textContent=T[k].l;b.dataset.k=k;b.onclick=()=>show(k);tabs.appendChild(b);
+const d=document.createElement("div");d.className="page";d.innerHTML=section(k);all.appendChild(d);
 });
-document.getElementById(“pdf1”).onclick=()=>window.print();
-document.getElementById(“pdfAll”).onclick=()=>{document.body.classList.add(“printall”);window.print();};
-window.addEventListener(“afterprint”,()=>document.body.classList.remove(“printall”));
-show(“body”);
+document.getElementById("pdf1").onclick=()=>window.print();
+document.getElementById("pdfAll").onclick=()=>{document.body.classList.add("printall");window.print();};
+window.addEventListener("afterprint",()=>document.body.classList.remove("printall"));
+show("body");
 </script>
 </body>
 </html>
