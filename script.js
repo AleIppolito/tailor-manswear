@@ -22,16 +22,16 @@ const bodySvg=()=>wrap(375,"Misure sul corpo","Figura maschile frontale con sett
  dim(166,240,160,352)+ld(157,355,72,364)+bd(52,368,7));
 
 const pantsSvg=()=>wrap(290,"Pantalone steso","Pantalone visto da davanti con cinque misure numerate",
-  `<path d="M110 30 L270 30 L284 90 L270 272 L204 272 L190 120 L176 272 L112 272 L96 90 Z" fill="var(--garment)" stroke="var(--garment-stroke)" stroke-width="2"/>`
-+`<line x1="190" y1="30" x2="190" y2="120" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-dasharray="4 4"/>`
-+`<line x1="176" y1="272" x2="190" y2="120" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-linejoin="round"/>`
-+`<line x1="204" y1="272" x2="190" y2="120" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-linejoin="round"/>`
-+`<line x1="110" y1="52" x2="270" y2="52" stroke="var(--garment-stroke)" stroke-width="1"/>`
-+dim(110,40,270,40)+ld(130,32,190,26)+bd(190,16,1)+
- dim(190,30,190,120)+ld(193,76,260,76)+bd(272,78,2)+
- dim(102,142,188,142)+ld(191,140,258,140)+bd(270,142,3)+
- dim(190,122,190,272)+ld(193,200,260,200)+bd(272,202,4)+
- dim(112,262,176,262)+ld(145,272,145,284)+bd(145,288,5));
+  `<path d="M122 30 L258 30 L268 92 L262 298 L206 298 L190 122 L174 298 L112 298 L102 92 Z" fill="var(--garment)" stroke="var(--garment-stroke)" stroke-width="2"/>`
++`<line x1="190" y1="30" x2="190" y2="122" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-dasharray="4 4"/>`
++`<line x1="174" y1="298" x2="190" y2="122" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-linejoin="round"/>`
++`<line x1="206" y1="298" x2="190" y2="122" stroke="var(--garment-stroke)" stroke-width="1.5" stroke-linejoin="round"/>`
++`<line x1="122" y1="52" x2="258" y2="52" stroke="var(--garment-stroke)" stroke-width="1"/>`
++dim(122,40,258,40)+ld(150,32,190,26)+bd(190,16,1)+
+ dim(190,30,190,122)+ld(193,76,260,76)+bd(272,78,2)+
+ dim(94,140,182,140)+ld(185,138,252,138)+bd(264,140,3)+
+ dim(190,110,190,298)+ld(193,200,260,200)+bd(272,202,4)+
+ dim(100,288,178,288)+ld(139,298,139,310)+bd(139,314,5));
 
 const shirtSvg=()=>wrap(285,"Camicia stesa","Camicia vista da davanti con sei misure numerate",
   `<path d="M160 28 L190 40 L220 28 L272 46 L336 202 L306 217 L254 112 L252 266 L128 266 L126 112 L74 217 L44 202 L108 46 Z" fill="var(--garment)" stroke="var(--garment-stroke)" stroke-width="2"/>`
